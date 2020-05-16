@@ -11,9 +11,9 @@ import java.util.Random;
 @Profile("dev")
 public class ApplicationConfig {
 
-    @Bean
-    public Random random() {
-        return new Random();
+    @Bean("random")
+    public Double random() {
+        return new Random().nextDouble();
     }
 
 
