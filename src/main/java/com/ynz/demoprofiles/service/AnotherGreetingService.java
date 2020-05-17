@@ -11,9 +11,14 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class AnotherGreetingService implements Greeting {
     @Value("${app.greeting}")
-    private String profile;
+    private String greeting;
 
-    public void sayHello(){
-        log.info(profile);
+    public void sayHello() {
+        log.info(greeting);
+    }
+
+    @Override
+    public void setGreeting(String anotherGreeting) {
+        this.greeting = anotherGreeting;
     }
 }

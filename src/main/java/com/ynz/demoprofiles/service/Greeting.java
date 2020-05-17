@@ -6,4 +6,6 @@ public interface Greeting {
 
     void sayHello() throws JsonProcessingException;
 
+    void setGreeting(String anotherGreeting);
+
 }

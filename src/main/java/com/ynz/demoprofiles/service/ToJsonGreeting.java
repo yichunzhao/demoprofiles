@@ -16,7 +16,7 @@ import java.util.Map;
 @Slf4j
 public class ToJsonGreeting implements Greeting {
     //injecting the property spring.profiles.active
-    @Value("${app.greeting}")
+    @Value("{app.greeting}")
     private String greeting;
 
     private ObjectMapper objectMapper;
@@ -33,5 +33,10 @@ public class ToJsonGreeting implements Greeting {
         map.put("ZZZ", greeting);
 
         log.info(objectMapper.writeValueAsString(map));
+    }
+
+    @Override
+    public void setGreeting(String anotherGreeting) {
+        this.greeting = anotherGreeting;
     }
 }

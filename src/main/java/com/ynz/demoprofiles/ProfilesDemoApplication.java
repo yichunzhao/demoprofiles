@@ -13,6 +13,7 @@ public class ProfilesDemoApplication {
     public static void main(String[] args) throws JsonProcessingException {
         ConfigurableApplicationContext context = SpringApplication.run(ProfilesDemoApplication.class, args);
 
+
         Greeting greeting = context.getBean(Greeting.class);
         greeting.sayHello();
 

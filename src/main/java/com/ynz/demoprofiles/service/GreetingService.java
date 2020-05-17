@@ -24,4 +24,8 @@ public class GreetingService implements Greeting {
         log.info("random :" + random);
     }
 
+    @Override
+    public void setGreeting(String anotherGreeting) {
+        this.greeting = anotherGreeting;
+    }
 }
